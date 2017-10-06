@@ -1,0 +1,9 @@
+<h1> Comedians </h1>
+<ul>
+<% @comedians.each do |comedian| %>
+  <p>Name: <%= comedian.name %></p>
+  <li>Age: <%= comedian.age %> </li>
+  <% special = comedian.specials.where(comedian_id: comedian.id) %>
+    
+<%end%>
+<ul>

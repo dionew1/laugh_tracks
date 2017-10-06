@@ -4,6 +4,8 @@
   <p>Name: <%= comedian.name %></p>
   <li>Age: <%= comedian.age %> </li>
   <% special = comedian.specials.where(comedian_id: comedian.id) %>
-    
+    <% special.each do |s| %>
+      <li>Special: <%= s.name %></li>
+      <% end %>
 <%end%>
 <ul>
